@@ -3,11 +3,11 @@ function Question2(nums) {
     
     for (let i = 0; i < n; i++) {
         if (nums[i] < 0 || nums[i] > n) {
-            return "Invalid input: All numbers should be in the range [0, n]";
+            return "Error: All numbers should be in the range [0, n]";
         }
         for (let j = i + 1; j < n; j++) {
             if (nums[i] === nums[j]) {
-                return "Invalid input: All numbers in the array should be unique";
+                return "Error: All numbers in the array should be unique";
             }
         }
     }
