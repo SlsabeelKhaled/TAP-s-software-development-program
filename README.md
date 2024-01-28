@@ -56,8 +56,8 @@ const nums = [0, 1];
 // Your function should return 2 because it is the number missing from the range [0 - 2]
 // Because 2 is the number of elements in the array.
 ```
-
-![Portfolio Image](./images/portfolio-image.png)
+## Final Portfolio Website:
+![Portfolio Image](test.png)
 
 
 
