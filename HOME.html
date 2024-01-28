@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        :root {
+            --color1: #D1884F;
+            --color4: #008AAA;
+            --color5: #3BBADB;
+            --color2:white;
+            
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0 0 0 30px;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: white;
+        }
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            min-height: 10vh;
+            background-color: var(--color2);
+            margin-right: 50px;
+        }
+        .navbar a {
+            color: black;
+            text-decoration: none;
+            letter-spacing: 3px;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .navbar a span {
+         margin-right: 5px;
+        }
+        .navbar a:hover {
+            color: #D1884F;
+        }
+        h5{
+            color: #3BBADB;
+        }
+        h1{
+            color: #008AAA;
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+        }
+        #welcome-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 92vh;
+            background-color: var(--color2);
+            color: var(--color1);
+        }
+        
+        button {
+            background-color: #3BBADB;
+            margin: 10px;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            
+             color: white;
+             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+        button:hover {
+            background-color: #D1884F;
+        }
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            #welcome-section {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#home"><span class="material-symbols-outlined">home</span> Home</a>
+        <a href="#about"><span class="material-symbols-outlined">person</span> About Me</a>
+        <a href="#contact"><span class="material-symbols-outlined">mail</span> Contact Me</a>
+    </nav>
+    <section id="welcome-section">
+        <div class="square">
+            <h5>Welcome to my site</h5>
+            <h1>Hi, I'm Slsabeel, a Software  <span style="color: #D1884F">Engineering</span></h1>
+            <p style="color: black">
+                I have extensive work experience as a research and teacher assistant at Al-Quds University, where I am actively involved in both academic and research endeavors within the field of computer science.
+                <span id="dots">...</span>
+                <span id="more" style="display: none;">
+                    In my capacity as a teacher assistant, I am responsible for delivering comprehensive courses in computer science, ensuring that students receive a well-rounded and up-to-date education in the subject. This involves creating engaging lesson plans, conducting lectures, and providing support to students through tutorials and office hours.
+                </span>
+                <a href="javascript:void(0);" id="readMore" onclick="readMore()">See More</a>
+            </p>
+           
+
+            <br>
+            <button>Hire me!</button>
+            <button>See My Project</button>
+        </div>
+        <img src="pic1.png" alt="Your Image">
+    </section>
+    
+    <script>
+    function readMore() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("readMore");
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "See More";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "See Less";
+            moreText.style.display = "inline";
+        }
+    }
+    </script>
+</body>
+</html>
